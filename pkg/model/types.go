@@ -79,6 +79,18 @@ type Pairs struct {
 	Pairs []dia.Pair
 }
 
+//MasterKey Risk Analysis
+type MasterKeyRisk struct {
+	Symbol           string
+	TimeLock         string
+	Multising        string
+	ClaimedKeyOpSec  string
+	VerifiedKeyOpSec string
+	isSecurity       bool
+	address          string
+	docs             string
+}
+
 // MarshalBinary -
 func (e *Coins) MarshalBinary() ([]byte, error) {
 	return json.Marshal(e)
